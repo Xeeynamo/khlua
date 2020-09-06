@@ -10,14 +10,14 @@ function toUtf8 {
 }
 
 for file in `ls ./bbs_fm_commonlua/*.lua`; do
-    $LUAC $file > "${file%.lua}.lub"
+    $LUAC -o "${file%.lua}.lub" $file
 done
 
 for file in `ls ./bbs_fm_lua/*.lua`; do
-    $LUAC $file > "${file%.lua}.lub"
+    $LUAC -o "${file%.lua}.lub" $file
 done
 
 
 for file in `ls ./bbs_fm_mission/script/*.lua`; do
-    $LUAC $file > "${file%.lua}.lub"
+    $LUAC -o "${file%.lua}.lub" $file
 done
