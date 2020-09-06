@@ -16,3 +16,8 @@ done
 for file in `ls ./bbs_fm_lua/*.lua`; do
     $LUAC $file > "${file%.lua}.lub"
 done
+
+
+for file in `ls ./bbs_fm_mission/script/*.lua`; do
+    $LUAC $file > "${file%.lua}.lub"
+done
